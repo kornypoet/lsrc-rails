@@ -1,0 +1,12 @@
+<%= form_for @hotel do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  
+  <%= f.label :city %>
+  <%= f.collection_select :city_id, @cities, :id, :name %>
+
+  <%= f.submit :save %>
+<% end %>

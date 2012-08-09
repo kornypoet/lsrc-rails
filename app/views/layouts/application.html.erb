@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<%= yield %>
+  <% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+  <% end %>
+  
+  <%= yield %>
 
 </body>
 </html>
